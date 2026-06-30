@@ -1,0 +1,224 @@
+[
+  {
+    "id": 1001,
+    "area": "Biología",
+    "topic": "Célula eucariota",
+    "question": "Observa el esquema celular. ¿Qué estructura se relaciona principalmente con la producción de ATP?",
+    "options": {
+      "A": "Mitocondria",
+      "B": "Núcleo",
+      "C": "Membrana plasmática"
+    },
+    "correct_answer": "A",
+    "explanation": "Las mitocondrias producen la mayor parte del ATP durante la respiración celular.",
+    "difficulty": "facil",
+    "illustration": "<svg viewBox='0 0 360 180' xmlns='http://www.w3.org/2000/svg'><rect width='360' height='180' rx='18' fill='#eff6ff'/><ellipse cx='180' cy='90' rx='135' ry='60' fill='#dbeafe' stroke='#2563eb' stroke-width='4'/><circle cx='165' cy='85' r='28' fill='#bfdbfe' stroke='#1d4ed8' stroke-width='3'/><ellipse cx='245' cy='74' rx='24' ry='10' fill='#fed7aa' stroke='#f97316' stroke-width='3'/><ellipse cx='245' cy='105' rx='24' ry='10' fill='#fed7aa' stroke='#f97316' stroke-width='3'/><text x='150' y='91' font-size='14' fill='#1e3a8a'>Núcleo</text><text x='220' y='145' font-size='14' fill='#9a3412'>Mitocondrias</text></svg>"
+  },
+  {
+    "id": 1002,
+    "area": "Ciencias de la Salud",
+    "topic": "Anatomía dental",
+    "question": "En el esquema dental, ¿qué estructura externa protege la corona del diente?",
+    "options": {
+      "A": "Esmalte",
+      "B": "Pulpa",
+      "C": "Ligamento periodontal"
+    },
+    "correct_answer": "A",
+    "explanation": "El esmalte recubre la corona y es el tejido más mineralizado del diente.",
+    "difficulty": "facil",
+    "illustration": "<svg viewBox='0 0 280 220' xmlns='http://www.w3.org/2000/svg'><rect width='280' height='220' rx='18' fill='#f8fafc'/><path d='M95 40 C75 55 70 90 86 125 C98 150 96 185 120 195 C135 200 130 155 140 155 C150 155 145 200 160 195 C184 185 182 150 194 125 C210 90 205 55 185 40 C170 28 155 42 140 42 C125 42 110 28 95 40Z' fill='#fff' stroke='#334155' stroke-width='4'/><path d='M96 68 C120 82 160 82 184 68' fill='none' stroke='#2563eb' stroke-width='4'/><path d='M112 100 C128 110 152 110 168 100' fill='none' stroke='#ef4444' stroke-width='4'/><text x='35' y='72' font-size='14' fill='#2563eb'>Esmalte</text><text x='178' y='104' font-size='14' fill='#ef4444'>Pulpa</text></svg>"
+  },
+  {
+    "id": 1003,
+    "area": "Ciencias de la Salud",
+    "topic": "Caries dental",
+    "question": "Una persona consume bebidas azucaradas varias veces al día y no se cepilla por la noche. ¿Cuál riesgo aumenta principalmente?",
+    "options": {
+      "A": "Desmineralización del esmalte y caries",
+      "B": "Crecimiento normal del esmalte",
+      "C": "Aumento de visión nocturna"
+    },
+    "correct_answer": "A",
+    "explanation": "Las bacterias metabolizan azúcares y producen ácidos que desmineralizan el esmalte.",
+    "difficulty": "media"
+  },
+  {
+    "id": 1004,
+    "area": "Pensamiento Matemático",
+    "topic": "Gráficas",
+    "question": "La gráfica muestra pacientes atendidos durante tres días. ¿Qué día tuvo mayor número de pacientes?",
+    "options": {
+      "A": "Miércoles",
+      "B": "Lunes",
+      "C": "Martes"
+    },
+    "correct_answer": "A",
+    "explanation": "La barra más alta corresponde a miércoles.",
+    "difficulty": "facil",
+    "illustration": "<svg viewBox='0 0 360 220' xmlns='http://www.w3.org/2000/svg'><rect width='360' height='220' rx='18' fill='#f8fafc'/><line x1='55' y1='180' x2='320' y2='180' stroke='#334155' stroke-width='3'/><line x1='55' y1='40' x2='55' y2='180' stroke='#334155' stroke-width='3'/><rect x='85' y='120' width='42' height='60' fill='#93c5fd'/><rect x='155' y='80' width='42' height='100' fill='#60a5fa'/><rect x='225' y='60' width='42' height='120' fill='#3b82f6'/><text x='83' y='200' font-size='14'>Lun</text><text x='153' y='200' font-size='14'>Mar</text><text x='226' y='200' font-size='14'>Mié</text><text x='20' y='45' font-size='14'>Pacientes</text></svg>"
+  },
+  {
+    "id": 1005,
+    "area": "Pensamiento Matemático",
+    "topic": "Proporcionalidad",
+    "question": "Una clínica dental atiende 36 pacientes en 6 horas. Si mantiene el mismo ritmo, ¿cuántos atenderá en 9 horas?",
+    "options": {
+      "A": "54",
+      "B": "45",
+      "C": "60"
+    },
+    "correct_answer": "A",
+    "explanation": "36 ÷ 6 = 6 pacientes por hora. En 9 horas atiende 6 × 9 = 54 pacientes.",
+    "difficulty": "media",
+    "illustration": "<svg viewBox='0 0 360 160' xmlns='http://www.w3.org/2000/svg'><rect width='360' height='160' rx='18' fill='#f8fafc'/><circle cx='85' cy='80' r='28' fill='#bfdbfe'/><circle cx='165' cy='80' r='28' fill='#bfdbfe'/><circle cx='245' cy='80' r='28' fill='#bfdbfe'/><text x='65' y='86' font-size='16'>6 h</text><text x='145' y='86' font-size='16'>36</text><text x='225' y='86' font-size='16'>9 h</text><text x='50' y='130' font-size='14'>Horas</text><text x='132' y='130' font-size='14'>Pacientes</text><text x='220' y='130' font-size='14'>¿?</text></svg>"
+  },
+  {
+    "id": 1006,
+    "area": "Pensamiento Matemático",
+    "topic": "Geometría",
+    "question": "Con base en la figura, ¿cuál es el área del triángulo?",
+    "options": {
+      "A": "120 cm²",
+      "B": "240 cm²",
+      "C": "32 cm²"
+    },
+    "correct_answer": "A",
+    "explanation": "Área = base × altura ÷ 2 = 20 × 12 ÷ 2 = 120 cm².",
+    "difficulty": "media",
+    "illustration": "<svg viewBox='0 0 330 210' xmlns='http://www.w3.org/2000/svg'><rect width='330' height='210' rx='18' fill='#f8fafc'/><polygon points='65,170 265,170 265,50' fill='#dbeafe' stroke='#2563eb' stroke-width='4'/><text x='150' y='190' font-size='16'>base = 20 cm</text><text x='270' y='115' font-size='16'>altura = 12 cm</text></svg>"
+  },
+  {
+    "id": 1007,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: campaña de salud bucal",
+    "passage": "En una comunidad escolar se observó que muchos estudiantes consumían bebidas azucaradas durante el recreo. El personal de salud propuso una campaña con tres acciones: colocar bebederos, explicar la relación entre azúcar y caries, y promover el cepillado nocturno. Después de dos meses, los estudiantes reportaron menor consumo de refrescos y mayor asistencia a revisiones preventivas. Aunque los resultados fueron positivos, el equipo concluyó que el cambio de hábitos debía mantenerse durante todo el ciclo escolar.",
+    "question": "¿Cuál es el propósito principal de la campaña descrita?",
+    "options": {
+      "A": "Mejorar hábitos relacionados con salud bucal",
+      "B": "Eliminar todas las revisiones dentales",
+      "C": "Aumentar el consumo de refrescos"
+    },
+    "correct_answer": "A",
+    "explanation": "La campaña busca reducir azúcar, promover agua y reforzar el cepillado nocturno.",
+    "difficulty": "facil"
+  },
+  {
+    "id": 1008,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: campaña de salud bucal",
+    "passage": "En una comunidad escolar se observó que muchos estudiantes consumían bebidas azucaradas durante el recreo. El personal de salud propuso una campaña con tres acciones: colocar bebederos, explicar la relación entre azúcar y caries, y promover el cepillado nocturno. Después de dos meses, los estudiantes reportaron menor consumo de refrescos y mayor asistencia a revisiones preventivas. Aunque los resultados fueron positivos, el equipo concluyó que el cambio de hábitos debía mantenerse durante todo el ciclo escolar.",
+    "question": "La expresión 'aunque los resultados fueron positivos' introduce principalmente:",
+    "options": {
+      "A": "Una concesión antes de una advertencia",
+      "B": "Una causa directa del problema",
+      "C": "Una lista de materiales usados"
+    },
+    "correct_answer": "A",
+    "explanation": "Aunque marca contraste: hubo resultados favorables, pero el hábito debe mantenerse.",
+    "difficulty": "media"
+  },
+  {
+    "id": 1009,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: campaña de salud bucal",
+    "passage": "En una comunidad escolar se observó que muchos estudiantes consumían bebidas azucaradas durante el recreo. El personal de salud propuso una campaña con tres acciones: colocar bebederos, explicar la relación entre azúcar y caries, y promover el cepillado nocturno. Después de dos meses, los estudiantes reportaron menor consumo de refrescos y mayor asistencia a revisiones preventivas. Aunque los resultados fueron positivos, el equipo concluyó que el cambio de hábitos debía mantenerse durante todo el ciclo escolar.",
+    "question": "¿Qué conclusión se deriva mejor del texto?",
+    "options": {
+      "A": "La prevención requiere continuidad",
+      "B": "Dos meses garantizan salud bucal permanente",
+      "C": "Las revisiones preventivas son innecesarias"
+    },
+    "correct_answer": "A",
+    "explanation": "El texto indica que el cambio de hábitos debe sostenerse durante el ciclo escolar.",
+    "difficulty": "media"
+  },
+  {
+    "id": 1010,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: lectura científica",
+    "passage": "La lectura científica no consiste únicamente en repetir datos. Un lector competente identifica la pregunta que guía el texto, reconoce la evidencia utilizada y distingue entre hechos comprobables y opiniones. Esta habilidad es útil en ciencias de la salud, porque permite valorar información sobre tratamientos, prevención y hábitos. Cuando una persona comparte recomendaciones sin evidencia, el lector crítico debe analizarlas antes de aceptarlas.",
+    "question": "Según el texto, leer científicamente implica:",
+    "options": {
+      "A": "Analizar evidencia y distinguir hechos de opiniones",
+      "B": "Memorizar palabras sin comprender",
+      "C": "Aceptar cualquier recomendación"
+    },
+    "correct_answer": "A",
+    "explanation": "El texto define la lectura científica como análisis de evidencia y distinción entre hechos y opiniones.",
+    "difficulty": "facil"
+  },
+  {
+    "id": 1011,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: lectura científica",
+    "passage": "La lectura científica no consiste únicamente en repetir datos. Un lector competente identifica la pregunta que guía el texto, reconoce la evidencia utilizada y distingue entre hechos comprobables y opiniones. Esta habilidad es útil en ciencias de la salud, porque permite valorar información sobre tratamientos, prevención y hábitos. Cuando una persona comparte recomendaciones sin evidencia, el lector crítico debe analizarlas antes de aceptarlas.",
+    "question": "Una recomendación sin evidencia debe ser:",
+    "options": {
+      "A": "Analizada antes de aceptarse",
+      "B": "Aceptada siempre",
+      "C": "Difundida sin revisión"
+    },
+    "correct_answer": "A",
+    "explanation": "El texto dice que el lector crítico debe analizar recomendaciones sin evidencia.",
+    "difficulty": "media"
+  },
+  {
+    "id": 1012,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: preparación del aspirante",
+    "passage": "Un aspirante organizó su preparación en bloques de estudio. Primero revisó biología y ciencias de la salud; después resolvió problemas de pensamiento matemático. Al finalizar cada semana, registró sus errores en una libreta y clasificó los temas que debía reforzar. Con el tiempo notó que estudiar menos horas, pero con mayor concentración y revisión de fallos, le resultaba más útil que leer muchas páginas sin practicar.",
+    "question": "¿Qué estrategia utilizó el aspirante al finalizar cada semana?",
+    "options": {
+      "A": "Registrar errores y clasificar temas por reforzar",
+      "B": "Cambiar de examen cada día sin revisar",
+      "C": "Evitar problemas matemáticos"
+    },
+    "correct_answer": "A",
+    "explanation": "El texto afirma que registró errores y clasificó los temas que debía reforzar.",
+    "difficulty": "facil"
+  },
+  {
+    "id": 1013,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: preparación del aspirante",
+    "passage": "Un aspirante organizó su preparación en bloques de estudio. Primero revisó biología y ciencias de la salud; después resolvió problemas de pensamiento matemático. Al finalizar cada semana, registró sus errores en una libreta y clasificó los temas que debía reforzar. Con el tiempo notó que estudiar menos horas, pero con mayor concentración y revisión de fallos, le resultaba más útil que leer muchas páginas sin practicar.",
+    "question": "La idea principal es que:",
+    "options": {
+      "A": "La preparación mejora al revisar errores y practicar",
+      "B": "La lectura siempre es inútil",
+      "C": "Solo se debe estudiar matemáticas"
+    },
+    "correct_answer": "A",
+    "explanation": "El texto destaca organización, práctica y revisión de fallos.",
+    "difficulty": "media"
+  },
+  {
+    "id": 1014,
+    "area": "Redacción indirecta",
+    "topic": "Cohesión",
+    "question": "Elige la oración mejor conectada.",
+    "options": {
+      "A": "Estudió con constancia; por eso, mejoró su resultado.",
+      "B": "Estudió con constancia mejoró por eso su resultado.",
+      "C": "Por eso estudió con constancia mejoró su resultado."
+    },
+    "correct_answer": "A",
+    "explanation": "La relación causa-consecuencia está marcada con puntuación adecuada.",
+    "difficulty": "media"
+  },
+  {
+    "id": 1015,
+    "area": "Redacción indirecta",
+    "topic": "Precisión léxica",
+    "question": "Selecciona la oración más precisa para un texto académico.",
+    "options": {
+      "A": "El examen evalúa habilidades y conocimientos disciplinares.",
+      "B": "El examen ve cosas importantes.",
+      "C": "El examen hace temas varios."
+    },
+    "correct_answer": "A",
+    "explanation": "La opción A usa lenguaje específico, claro y formal.",
+    "difficulty": "facil"
+  }
+]
