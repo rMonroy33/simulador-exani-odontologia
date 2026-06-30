@@ -217,6 +217,11 @@ button:hover{background:var(--blue-dark)}
   box-shadow:0 4px 14px rgba(15,23,42,.05);
 }
 
+.question-card.real-question{
+  border-color:#93c5fd;
+  box-shadow:0 8px 22px rgba(29,78,216,.09);
+}
+
 .question-card-header{
   display:flex;
   justify-content:space-between;
@@ -236,13 +241,22 @@ button:hover{background:var(--blue-dark)}
   color:var(--muted);
 }
 
-.diagnostic-pill{
+.diagnostic-pill,.real-pill{
   display:inline-block;
   padding:3px 7px;
   border-radius:999px;
+  font-weight:800;
+  margin-left:4px;
+}
+
+.diagnostic-pill{
   background:#fef3c7;
   color:#92400e;
-  font-weight:800;
+}
+
+.real-pill{
+  background:#dbeafe;
+  color:#1d4ed8;
 }
 
 .question-text{
