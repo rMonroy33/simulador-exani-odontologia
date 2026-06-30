@@ -9,33 +9,58 @@
 <body>
   <div id="app">
     <header class="hero">
-      <p class="badge">Práctica no oficial</p>
+      <p class="badge">Práctica no oficial · EXANI-II</p>
       <h1>Simulador EXANI-II Odontología UMSNH</h1>
-      <p>Banco de preguntas de práctica para aspirantes al área de Ciencias de la Salud.</p>
+      <p>Banco de práctica por áreas, lecturas, casos, ilustraciones, revisión de errores y diagnóstico por tema.</p>
     </header>
 
     <main>
-      <section id="intro" class="card">
-        <h2>Antes de iniciar</h2>
-        <p>El simulacro toma 50 preguntas aleatorias del banco. Tendrás 90 minutos para contestar. Al finalizar verás tus aciertos por área y una revisión de respuestas.</p>
-        <button id="startButton">Iniciar simulacro</button>
+      <section id="intro" class="card intro-card">
+        <div class="intro-copy">
+          <h2>Elige un modo</h2>
+          <p>Las preguntas se muestran por área completa para ahorrar tiempo. Al final se califican las áreas principales y el inglés aparece como diagnóstico.</p>
+          <div id="bankStats" class="bank-stats">Cargando banco de preguntas...</div>
+        </div>
+
+        <div class="mode-grid">
+          <button class="mode-card" data-mode="quick">
+            <span>Práctica rápida</span>
+            <strong>50 preguntas aprox.</strong>
+            <small>Útil para estudiar por bloques.</small>
+          </button>
+          <button class="mode-card" data-mode="full">
+            <span>Simulacro completo</span>
+            <strong>Todo el banco</strong>
+            <small>Incluye inglés diagnóstico y revisión final.</small>
+          </button>
+          <button class="mode-card" data-mode="errors">
+            <span>Repasar errores</span>
+            <strong>Solo falladas</strong>
+            <small>Usa las preguntas incorrectas del intento anterior.</small>
+          </button>
+        </div>
       </section>
 
       <section id="exam" class="card hidden">
         <div class="topbar">
           <strong id="timer">Tiempo restante: 90:00</strong>
-          <span id="progress">Pregunta 1 de 50</span>
+          <span id="progress">Área 1</span>
         </div>
         <div id="questionContainer"></div>
-        <button id="nextButton" class="hidden">Siguiente</button>
+        <button id="nextButton" class="hidden">Guardar área y continuar</button>
       </section>
 
       <section id="results" class="card hidden">
         <h2>Resultados</h2>
         <p id="score"></p>
+        <div id="summaryCards" class="summary-grid"></div>
         <div id="areaResults"></div>
+        <div id="weakTopics"></div>
+        <div class="result-actions">
+          <button id="reviewErrorsButton">Repasar preguntas falladas</button>
+          <button id="restartButton">Volver al inicio</button>
+        </div>
         <div id="review"></div>
-        <button id="restartButton">Reiniciar simulacro</button>
       </section>
     </main>
   </div>
