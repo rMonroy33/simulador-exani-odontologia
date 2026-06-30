@@ -8,6 +8,7 @@ let remainingTime = 90 * 60;
 let currentMode = 'quick';
 
 const QUESTION_FILES = [
+  { path: 'data/questions_hard.json', required: false },
   { path: 'data/questions.json', required: true },
   { path: 'data/questions_extra.json', required: false },
   { path: 'data/questions_enhanced.json', required: false }
@@ -50,14 +51,20 @@ async function loadQuestions() {
   updateBankStats();
 }
 
+function getRealPool() {
+  const real = questions.filter(question => question.exam_level === 'real');
+  return real.length >= 30 ? real : questions;
+}
+
 function updateBankStats() {
+  const realCount = questions.filter(question => question.exam_level === 'real').length;
   const stats = questions.reduce((acc, question) => {
     acc[question.area] = (acc[question.area] || 0) + 1;
     return acc;
   }, {});
 
-  const scoredCount = questions.filter(question => !DIAGNOSTIC_AREAS.has(question.area)).length;
-  const diagnosticCount = questions.length - scoredCount;
+  const scoredCount = getRealPool().filter(question => !DIAGNOSTIC_AREAS.has(question.area)).length;
+  const diagnosticCount = getRealPool().length - scoredCount;
   const detail = Object.entries(stats)
     .sort(([a], [b]) => getAreaIndex(a) - getAreaIndex(b))
     .map(([area, total]) => `<span>${area}: <strong>${total}</strong></span>`)
@@ -67,7 +74,8 @@ function updateBankStats() {
   if (bankStats) {
     bankStats.innerHTML = `
       <strong>${questions.length}</strong> preguntas cargadas ·
-      <strong>${scoredCount}</strong> calificables ·
+      <strong>${realCount}</strong> de mayor dificultad ·
+      <strong>${scoredCount}</strong> calificables en modo nivel real ·
       <strong>${diagnosticCount}</strong> diagnósticas
       <div class="bank-detail">${detail}</div>
     `;
@@ -81,6 +89,8 @@ function getAreaIndex(area) {
 
 function sortQuestions(allQuestions) {
   return allQuestions.slice().sort((a, b) => {
+    const levelDifference = (b.exam_level === 'real') - (a.exam_level === 'real');
+    if (levelDifference !== 0) return levelDifference;
     const areaDifference = getAreaIndex(a.area) - getAreaIndex(b.area);
     if (areaDifference !== 0) return areaDifference;
     const topicDifference = String(a.topic || '').localeCompare(String(b.topic || ''), 'es');
@@ -120,14 +130,16 @@ function balancedQuickSelection(allQuestions, limit = 50) {
 }
 
 function selectQuestionsForMode(mode) {
-  if (mode === 'full') return sortQuestions(questions);
+  const realPool = getRealPool();
+
+  if (mode === 'full') return sortQuestions(realPool);
 
   if (mode === 'errors') {
     const ids = new Set(getSavedErrorIds());
     return sortQuestions(questions.filter(question => ids.has(String(question.id))));
   }
 
-  return balancedQuickSelection(questions, 50);
+  return balancedQuickSelection(realPool, 50);
 }
 
 function buildAreaGroups(orderedQuestions) {
@@ -212,12 +224,13 @@ function renderQuestionCard(question, index, globalNumber) {
   `).join('');
 
   const diagnosticLabel = DIAGNOSTIC_AREAS.has(question.area) ? '<span class="diagnostic-pill">Diagnóstico</span>' : '';
+  const realLabel = question.exam_level === 'real' ? '<span class="real-pill">Nivel real</span>' : '';
 
   return `
-    <article class="question-card">
+    <article class="question-card ${question.exam_level === 'real' ? 'real-question' : ''}">
       <div class="question-card-header">
         <span>Pregunta ${globalNumber}</span>
-        <small>${question.topic || 'Tema general'} · ${question.difficulty || 'media'} ${diagnosticLabel}</small>
+        <small>${question.topic || 'Tema general'} · ${question.difficulty || 'media'} ${diagnosticLabel} ${realLabel}</small>
       </div>
       ${renderPassage(question)}
       ${renderIllustration(question)}
