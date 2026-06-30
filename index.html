@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador EXANI‑II Odontología UMSNH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Simulador EXANI‑II Odontología UMSNH</h1>
+    </header>
+    <main id="main">
+      <!-- Intro section -->
+      <section id="intro">
+        <p>Bienvenido al simulador de examen de admisión a Odontología de la UMSNH, basado en el EXANI‑II del Ceneval. Este simulacro selecciona 50 preguntas al azar de un banco más amplio y cronometra el tiempo disponible. Presiona el botón para comenzar.</p>
+        <button id="startButton">Iniciar simulacro</button>
+      </section>
+      <!-- Exam section -->
+      <section id="exam" class="hidden">
+        <div id="timer"></div>
+        <div id="progress"></div>
+        <div id="questionContainer"></div>
+        <button id="nextButton" class="hidden">Siguiente</button>
+      </section>
+      <!-- Results section -->
+      <section id="results" class="hidden">
+        <h2>Resultados</h2>
+        <p id="score"></p>
+        <div id="areaResults"></div>
+        <button id="restartButton">Reiniciar</button>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
