@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador EXANI-II Odontología UMSNH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="hero">
+      <p class="badge">Práctica no oficial</p>
+      <h1>Simulador EXANI-II Odontología UMSNH</h1>
+      <p>Banco de preguntas de práctica para aspirantes al área de Ciencias de la Salud.</p>
+    </header>
+
+    <main>
+      <section id="intro" class="card">
+        <h2>Antes de iniciar</h2>
+        <p>El simulacro toma 50 preguntas aleatorias del banco. Tendrás 90 minutos para contestar. Al finalizar verás tus aciertos por área y una revisión de respuestas.</p>
+        <button id="startButton">Iniciar simulacro</button>
+      </section>
+
+      <section id="exam" class="card hidden">
+        <div class="topbar">
+          <strong id="timer">Tiempo restante: 90:00</strong>
+          <span id="progress">Pregunta 1 de 50</span>
+        </div>
+        <div id="questionContainer"></div>
+        <button id="nextButton" class="hidden">Siguiente</button>
+      </section>
+
+      <section id="results" class="card hidden">
+        <h2>Resultados</h2>
+        <p id="score"></p>
+        <div id="areaResults"></div>
+        <div id="review"></div>
+        <button id="restartButton">Reiniciar simulacro</button>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
