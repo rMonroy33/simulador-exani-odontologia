@@ -1,0 +1,329 @@
+[
+  {
+    "id": 2001,
+    "area": "Biología",
+    "topic": "Membrana plasmática",
+    "question": "Una sustancia experimental impide que la célula controle qué moléculas entran y salen de ella. ¿Qué estructura fue afectada directamente?",
+    "options": { "A": "Membrana plasmática", "B": "Ribosoma", "C": "Nucléolo" },
+    "correct_answer": "A",
+    "explanation": "La membrana plasmática regula el intercambio selectivo de sustancias entre la célula y el medio.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2002,
+    "area": "Biología",
+    "topic": "Respiración celular",
+    "question": "Durante ejercicio intenso, una célula muscular aumenta su demanda de energía. ¿Qué organelo tendría mayor actividad?",
+    "options": { "A": "Mitocondria", "B": "Lisosoma", "C": "Vacuola" },
+    "correct_answer": "A",
+    "explanation": "La mitocondria participa en la respiración celular y en la producción de ATP.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2003,
+    "area": "Biología",
+    "topic": "Genética mendeliana",
+    "question": "En una familia, ambos padres son portadores de un rasgo recesivo. Si el genotipo de ambos es Aa, ¿qué proporción de hijos podría expresar el rasgo recesivo?",
+    "options": { "A": "1 de cada 4", "B": "2 de cada 4", "C": "3 de cada 4" },
+    "correct_answer": "A",
+    "explanation": "En Aa × Aa los genotipos posibles son AA, Aa, Aa y aa; solo aa expresa el rasgo recesivo.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2004,
+    "area": "Biología",
+    "topic": "Homeostasis",
+    "question": "Una persona expuesta al calor comienza a sudar. ¿Qué proceso se ejemplifica?",
+    "options": { "A": "Homeostasis", "B": "Mutación", "C": "Fecundación" },
+    "correct_answer": "A",
+    "explanation": "La sudoración ayuda a regular la temperatura corporal y mantener condiciones internas estables.",
+    "difficulty": "facil"
+  },
+  {
+    "id": 2005,
+    "area": "Biología",
+    "topic": "Ecología",
+    "question": "Si disminuye drásticamente la población de productores en un ecosistema, ¿qué consecuencia es más probable?",
+    "options": { "A": "Disminuye la energía disponible para consumidores", "B": "Aumenta la fotosíntesis de todos los animales", "C": "Desaparece la necesidad de nutrientes" },
+    "correct_answer": "A",
+    "explanation": "Los productores incorporan energía al ecosistema; si disminuyen, se afecta la cadena alimentaria.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2006,
+    "area": "Biología",
+    "topic": "Sistema circulatorio",
+    "question": "Un paciente presenta baja cantidad de hemoglobina. ¿Qué función se vería afectada principalmente?",
+    "options": { "A": "Transporte de oxígeno", "B": "Producción de saliva", "C": "Digestión de grasas" },
+    "correct_answer": "A",
+    "explanation": "La hemoglobina transporta oxígeno en los glóbulos rojos.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2007,
+    "area": "Biología",
+    "topic": "Meiosis",
+    "question": "¿Por qué la meiosis es importante para la reproducción sexual?",
+    "options": { "A": "Forma gametos con la mitad de cromosomas", "B": "Produce células idénticas para reparar tejidos", "C": "Elimina por completo la variación genética" },
+    "correct_answer": "A",
+    "explanation": "La meiosis produce gametos haploides y favorece variabilidad genética.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2008,
+    "area": "Ciencias de la Salud",
+    "topic": "Prevención bucal",
+    "question": "Durante una jornada escolar se detectan lesiones iniciales de caries. ¿Qué intervención preventiva es más adecuada?",
+    "options": { "A": "Educación sobre higiene, reducción de azúcares y uso de flúor", "B": "Extracción preventiva de dientes sanos", "C": "Suspender revisiones dentales" },
+    "correct_answer": "A",
+    "explanation": "La prevención de caries combina higiene, reducción de azúcares, flúor y revisiones oportunas.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2009,
+    "area": "Ciencias de la Salud",
+    "topic": "Bioseguridad",
+    "question": "En una consulta odontológica se cambia de paciente. ¿Qué acción reduce mejor el riesgo de transmisión cruzada?",
+    "options": { "A": "Higiene de manos, cambio de guantes y desinfección de superficies", "B": "Usar los mismos guantes si no se ven sucios", "C": "Solo abrir la ventana del consultorio" },
+    "correct_answer": "A",
+    "explanation": "La transmisión cruzada se previene con barreras, higiene de manos y desinfección entre pacientes.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2010,
+    "area": "Ciencias de la Salud",
+    "topic": "Epidemiología",
+    "question": "Una clínica registró 12 casos nuevos de gingivitis durante junio. ¿Qué indicador se describe?",
+    "options": { "A": "Incidencia", "B": "Prevalencia acumulada", "C": "Mortalidad" },
+    "correct_answer": "A",
+    "explanation": "La incidencia cuenta casos nuevos en un periodo determinado.",
+    "difficulty": "dificil"
+  },
+  {
+    "id": 2011,
+    "area": "Ciencias de la Salud",
+    "topic": "Ética clínica",
+    "question": "Antes de un procedimiento, el odontólogo explica riesgos, beneficios y alternativas. ¿Qué principio se está favoreciendo?",
+    "options": { "A": "Autonomía del paciente", "B": "Secreto sin información", "C": "Imposición del tratamiento" },
+    "correct_answer": "A",
+    "explanation": "El consentimiento informado respeta la autonomía al permitir una decisión libre e informada.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2012,
+    "area": "Ciencias de la Salud",
+    "topic": "Nutrición y salud bucal",
+    "question": "¿Qué hábito aumenta más el riesgo de caries en adolescentes?",
+    "options": { "A": "Consumir azúcares frecuentes entre comidas", "B": "Beber agua simple", "C": "Cepillarse antes de dormir" },
+    "correct_answer": "A",
+    "explanation": "La frecuencia de exposición al azúcar favorece producción de ácidos y desmineralización.",
+    "difficulty": "facil"
+  },
+  {
+    "id": 2013,
+    "area": "Ciencias de la Salud",
+    "topic": "Anatomía dental",
+    "question": "Si una lesión dental alcanza la pulpa, ¿qué manifestación es más probable?",
+    "options": { "A": "Dolor por compromiso de vasos y nervios", "B": "Ausencia total de sensibilidad", "C": "Crecimiento inmediato de esmalte nuevo" },
+    "correct_answer": "A",
+    "explanation": "La pulpa contiene nervios y vasos sanguíneos; al afectarse puede causar dolor.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2014,
+    "area": "Pensamiento Matemático",
+    "topic": "Proporcionalidad aplicada",
+    "question": "Una clínica atiende 36 pacientes en 6 horas. Si mantiene el mismo ritmo, ¿cuántos pacientes atiende en 9 horas?",
+    "options": { "A": "54", "B": "45", "C": "60" },
+    "correct_answer": "A",
+    "explanation": "36 pacientes entre 6 horas equivale a 6 pacientes por hora; 6 × 9 = 54.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2015,
+    "area": "Pensamiento Matemático",
+    "topic": "Porcentajes",
+    "question": "En un grupo de 80 aspirantes, 65% aprobó un simulacro. ¿Cuántos aspirantes aprobaron?",
+    "options": { "A": "52", "B": "48", "C": "60" },
+    "correct_answer": "A",
+    "explanation": "65% de 80 es 0.65 × 80 = 52.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2016,
+    "area": "Pensamiento Matemático",
+    "topic": "Álgebra aplicada",
+    "question": "Una cuota dental incluye $120 de revisión más $35 por radiografía. Si el total fue de $225, ¿cuántas radiografías se tomaron?",
+    "options": { "A": "3", "B": "4", "C": "5" },
+    "correct_answer": "A",
+    "explanation": "225 - 120 = 105; 105 ÷ 35 = 3 radiografías.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2017,
+    "area": "Pensamiento Matemático",
+    "topic": "Probabilidad",
+    "question": "En una caja hay 5 guantes azules y 3 blancos. Si se toma un guante al azar, ¿cuál es la probabilidad de que sea blanco?",
+    "options": { "A": "3/8", "B": "5/8", "C": "1/3" },
+    "correct_answer": "A",
+    "explanation": "Hay 8 guantes en total y 3 son blancos; la probabilidad es 3/8.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2018,
+    "area": "Pensamiento Matemático",
+    "topic": "Interpretación de tabla",
+    "question": "Una estudiante obtuvo 18 aciertos de 30 en matemáticas y 24 de 30 en lectura. ¿En qué área tuvo mayor porcentaje de aciertos?",
+    "options": { "A": "Lectura", "B": "Matemáticas", "C": "Ambas iguales" },
+    "correct_answer": "A",
+    "explanation": "Matemáticas: 18/30 = 60%. Lectura: 24/30 = 80%.",
+    "difficulty": "facil"
+  },
+  {
+    "id": 2019,
+    "area": "Pensamiento Matemático",
+    "topic": "Geometría aplicada",
+    "question": "Un cartel rectangular mide 80 cm de largo y 45 cm de ancho. ¿Cuál es su área?",
+    "options": { "A": "3600 cm²", "B": "2500 cm²", "C": "125 cm²" },
+    "correct_answer": "A",
+    "explanation": "Área del rectángulo = largo × ancho = 80 × 45 = 3600 cm².",
+    "difficulty": "facil"
+  },
+  {
+    "id": 2020,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: prevención dental",
+    "passage": "En una secundaria se realizó un programa de prevención bucal después de detectar que muchos alumnos presentaban placa dentobacteriana. El programa no se limitó a dar una plática: incluyó demostraciones de cepillado, entrega de material informativo, revisión de hábitos alimenticios y seguimiento mensual. Al finalizar el primer trimestre, los docentes notaron que los alumnos hablaban con mayor claridad sobre la relación entre azúcar, bacterias y caries. Sin embargo, el equipo de salud explicó que el aprendizaje solo tendría efecto duradero si las familias participaban en casa.",
+    "question": "¿Cuál es la idea principal del texto?",
+    "options": { "A": "La prevención bucal requiere acciones continuas y participación familiar", "B": "Una plática aislada resuelve todos los problemas dentales", "C": "La placa dentobacteriana no se relaciona con hábitos" },
+    "correct_answer": "A",
+    "explanation": "El texto destaca un programa integral y concluye que la continuidad en casa es necesaria.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2021,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: prevención dental",
+    "passage": "En una secundaria se realizó un programa de prevención bucal después de detectar que muchos alumnos presentaban placa dentobacteriana. El programa no se limitó a dar una plática: incluyó demostraciones de cepillado, entrega de material informativo, revisión de hábitos alimenticios y seguimiento mensual. Al finalizar el primer trimestre, los docentes notaron que los alumnos hablaban con mayor claridad sobre la relación entre azúcar, bacterias y caries. Sin embargo, el equipo de salud explicó que el aprendizaje solo tendría efecto duradero si las familias participaban en casa.",
+    "question": "La frase 'no se limitó a dar una plática' sugiere que el programa fue:",
+    "options": { "A": "Integral y práctico", "B": "Breve y sin seguimiento", "C": "Exclusivamente teórico" },
+    "correct_answer": "A",
+    "explanation": "Después de esa frase se enlistan acciones prácticas, seguimiento y revisión de hábitos.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2022,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: evidencia científica",
+    "passage": "En redes sociales circuló la recomendación de usar un remedio casero para sustituir la visita al dentista. Aunque muchas personas compartieron la publicación, no se citaban estudios ni se explicaban riesgos. Una profesora pidió a sus alumnos identificar si la recomendación presentaba evidencia, si distinguía entre experiencia personal y datos comprobables, y si ofrecía orientación profesional. El grupo concluyó que una afirmación popular no necesariamente es confiable.",
+    "question": "¿Qué criterio permite evaluar mejor la confiabilidad de la recomendación?",
+    "options": { "A": "La presencia de evidencia y orientación profesional", "B": "El número de veces que se compartió", "C": "El uso de frases llamativas" },
+    "correct_answer": "A",
+    "explanation": "El texto contrasta popularidad con evidencia y orientación profesional.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2023,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: evidencia científica",
+    "passage": "En redes sociales circuló la recomendación de usar un remedio casero para sustituir la visita al dentista. Aunque muchas personas compartieron la publicación, no se citaban estudios ni se explicaban riesgos. Una profesora pidió a sus alumnos identificar si la recomendación presentaba evidencia, si distinguía entre experiencia personal y datos comprobables, y si ofrecía orientación profesional. El grupo concluyó que una afirmación popular no necesariamente es confiable.",
+    "question": "¿Qué conclusión se deriva del texto?",
+    "options": { "A": "La popularidad no garantiza confiabilidad", "B": "Toda publicación viral es científica", "C": "La experiencia personal siempre reemplaza la evidencia" },
+    "correct_answer": "A",
+    "explanation": "El cierre afirma que una afirmación popular no necesariamente es confiable.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2024,
+    "area": "Comprensión lectora",
+    "topic": "Lectura larga: hábitos de estudio",
+    "passage": "Mariana decidió preparar su examen con simulacros semanales. Al principio solo revisaba el puntaje total, pero después comenzó a clasificar sus errores por tema. Descubrió que fallaba más en proporcionalidad y comprensión de inferencias. En lugar de estudiar todo de nuevo, dedicó sesiones cortas a esos puntos y resolvió preguntas similares. Su avance no fue inmediato, pero después de varias semanas sus resultados fueron más estables.",
+    "question": "¿Qué cambio mejoró el método de estudio de Mariana?",
+    "options": { "A": "Clasificar errores por tema y practicar puntos débiles", "B": "Estudiar sin revisar resultados", "C": "Eliminar los simulacros" },
+    "correct_answer": "A",
+    "explanation": "El texto muestra que identificar temas débiles permitió enfocar la práctica.",
+    "difficulty": "facil"
+  },
+  {
+    "id": 2025,
+    "area": "Redacción indirecta",
+    "topic": "Conectores",
+    "question": "Elige la opción que completa mejor la oración: 'El paciente redujo el consumo de azúcar; ____, disminuyó su riesgo de caries'.",
+    "options": { "A": "por lo tanto", "B": "sin embargo", "C": "aunque" },
+    "correct_answer": "A",
+    "explanation": "'Por lo tanto' introduce una consecuencia lógica.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2026,
+    "area": "Redacción indirecta",
+    "topic": "Claridad y precisión",
+    "question": "Selecciona la oración más clara y adecuada para un reporte académico.",
+    "options": { "A": "La higiene bucal deficiente aumenta el riesgo de caries.", "B": "Lo de lavarse mal afecta cosas de la boca.", "C": "Eso bucal está mal y causa problemas varios." },
+    "correct_answer": "A",
+    "explanation": "La opción A es precisa, formal y evita expresiones vagas.",
+    "difficulty": "facil"
+  },
+  {
+    "id": 2027,
+    "area": "Redacción indirecta",
+    "topic": "Puntuación",
+    "question": "Elige la oración correctamente puntuada.",
+    "options": { "A": "Si el dolor persiste, el paciente debe acudir a revisión.", "B": "Si el dolor, persiste el paciente debe acudir a revisión.", "C": "Si, el dolor persiste el paciente, debe acudir a revisión." },
+    "correct_answer": "A",
+    "explanation": "La coma separa la subordinada condicional inicial.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2028,
+    "area": "Redacción indirecta",
+    "topic": "Concordancia",
+    "question": "Selecciona la oración con concordancia correcta.",
+    "options": { "A": "Las revisiones preventivas reducen riesgos.", "B": "Las revisiones preventiva reduce riesgos.", "C": "La revisiones preventivas reduce riesgos." },
+    "correct_answer": "A",
+    "explanation": "Sujeto, adjetivo y verbo concuerdan en plural.",
+    "difficulty": "facil"
+  },
+  {
+    "id": 2029,
+    "area": "Inglés diagnóstico",
+    "topic": "Reading: health habits",
+    "passage": "Ana wants to improve her health before entering university. She drinks more water, sleeps at regular hours, and visits the dentist for a preventive check-up. She says that small habits are easier to maintain than sudden changes.",
+    "question": "What is the main idea of the text?",
+    "options": { "A": "Small healthy habits can be maintained", "B": "Ana avoids preventive care", "C": "Sudden changes are always easier" },
+    "correct_answer": "A",
+    "explanation": "The text emphasizes regular water intake, sleep, preventive care and small habits.",
+    "difficulty": "facil"
+  },
+  {
+    "id": 2030,
+    "area": "Inglés diagnóstico",
+    "topic": "Vocabulary",
+    "question": "Choose the best meaning of 'preventive check-up'.",
+    "options": { "A": "A visit to detect or avoid problems early", "B": "A surgery after an emergency", "C": "A treatment without evaluation" },
+    "correct_answer": "A",
+    "explanation": "A preventive check-up is done before a problem becomes serious.",
+    "difficulty": "media"
+  },
+  {
+    "id": 2031,
+    "area": "Inglés diagnóstico",
+    "topic": "Grammar",
+    "question": "Choose the correct sentence.",
+    "options": { "A": "She studies every day.", "B": "She study every day.", "C": "She studying every day." },
+    "correct_answer": "A",
+    "explanation": "With 'she' in present simple, the verb takes -s: studies.",
+    "difficulty": "facil"
+  },
+  {
+    "id": 2032,
+    "area": "Inglés diagnóstico",
+    "topic": "Reading: inference",
+    "passage": "Luis was nervous before his exam, so he solved a short practice test and reviewed his mistakes. After that, he felt more confident because he knew which topics needed more attention.",
+    "question": "What can be inferred about Luis?",
+    "options": { "A": "Reviewing mistakes helped him feel prepared", "B": "He ignored his weak topics", "C": "He did not practice before the exam" },
+    "correct_answer": "A",
+    "explanation": "The text says he reviewed mistakes and then felt more confident.",
+    "difficulty": "media"
+  }
+]
