@@ -1,6 +1,7 @@
 let questions = [];
 let examQuestions = [];
-let currentIndex = 0;
+let areaGroups = [];
+let currentAreaIndex = 0;
 let answers = [];
 let timerInterval;
 let remainingTime = 90 * 60;
@@ -32,13 +33,23 @@ function buildOrderedExam(allQuestions) {
     .sort((a, b) => {
       const areaDifference = getAreaIndex(a.area) - getAreaIndex(b.area);
       if (areaDifference !== 0) return areaDifference;
-
       const topicDifference = String(a.topic).localeCompare(String(b.topic), 'es');
       if (topicDifference !== 0) return topicDifference;
-
       return Number(a.id) - Number(b.id);
-    })
-    .slice(0, 50);
+    });
+}
+
+function buildAreaGroups(orderedQuestions) {
+  const groups = [];
+  orderedQuestions.forEach(question => {
+    let group = groups.find(item => item.area === question.area);
+    if (!group) {
+      group = { area: question.area, questions: [] };
+      groups.push(group);
+    }
+    group.questions.push(question);
+  });
+  return groups;
 }
 
 function updateTimer() {
@@ -49,7 +60,8 @@ function updateTimer() {
 
 function startExam() {
   examQuestions = buildOrderedExam(questions);
-  currentIndex = 0;
+  areaGroups = buildAreaGroups(examQuestions);
+  currentAreaIndex = 0;
   answers = [];
   remainingTime = 90 * 60;
 
@@ -65,91 +77,135 @@ function startExam() {
     if (remainingTime <= 0) finishExam();
   }, 1000);
 
-  showQuestion();
+  showCurrentArea();
 }
 
-function getTopicProgress(question) {
-  const sameTopicQuestions = examQuestions.filter(q => q.area === question.area && q.topic === question.topic);
-  const answeredSameTopic = examQuestions
-    .slice(0, currentIndex + 1)
-    .filter(q => q.area === question.area && q.topic === question.topic);
-
-  return `${answeredSameTopic.length} de ${sameTopicQuestions.length}`;
+function getAnsweredCountForArea(group) {
+  return group.questions.filter(question => document.querySelector(`input[name="q-${question.id}"]:checked`)).length;
 }
 
-function showQuestion() {
-  const question = examQuestions[currentIndex];
-  const nextQuestion = examQuestions[currentIndex + 1];
-  const isLastQuestion = currentIndex === examQuestions.length - 1;
+function updateAreaButtonState() {
+  const group = areaGroups[currentAreaIndex];
+  const answered = getAnsweredCountForArea(group);
+  const nextButton = document.getElementById('nextButton');
+  const isLastArea = currentAreaIndex === areaGroups.length - 1;
 
-  document.getElementById('progress').textContent = `Pregunta ${currentIndex + 1} de ${examQuestions.length}`;
+  document.getElementById('areaAnsweredCounter').textContent = `${answered} de ${group.questions.length} respondidas`;
+  nextButton.textContent = isLastArea ? 'Finalizar simulacro' : 'Guardar área y continuar';
+  nextButton.classList.remove('hidden');
+}
+
+function renderIllustration(question) {
+  if (!question.illustration) return '';
+  return `<div class="illustration-box">${question.illustration}</div>`;
+}
+
+function renderPassage(question) {
+  if (!question.passage) return '';
+  return `<div class="passage"><strong>Lectura</strong><p>${question.passage}</p></div>`;
+}
+
+function renderQuestionCard(question, index) {
+  const options = Object.entries(question.options).map(([key, text]) => `
+    <label class="option">
+      <input type="radio" name="q-${question.id}" value="${key}">
+      <span><strong>${key})</strong> ${text}</span>
+    </label>
+  `).join('');
+
+  return `
+    <article class="question-card">
+      <div class="question-card-header">
+        <span>Pregunta ${index + 1}</span>
+        <small>${question.topic} · ${question.difficulty}</small>
+      </div>
+      ${renderPassage(question)}
+      ${renderIllustration(question)}
+      <div class="question-text">${question.question}</div>
+      <div class="answers-panel">${options}</div>
+    </article>
+  `;
+}
+
+function showCurrentArea() {
+  const group = areaGroups[currentAreaIndex];
+  const totalAnsweredBeforeArea = answers.length;
+  const questionStart = totalAnsweredBeforeArea + 1;
+  const questionEnd = totalAnsweredBeforeArea + group.questions.length;
+
+  document.getElementById('progress').textContent = `Área ${currentAreaIndex + 1} de ${areaGroups.length} · Preguntas ${questionStart}-${questionEnd}`;
 
   const container = document.getElementById('questionContainer');
   container.innerHTML = `
-    <div class="topic-banner">
-      <span class="topic-label">Tema actual</span>
-      <strong>${question.area} · ${question.topic}</strong>
-      <span>${getTopicProgress(question)}</span>
-    </div>
-    <div class="question-layout">
-      <div class="question-panel">
-        <div class="meta">Dificultad: ${question.difficulty}</div>
-        <div class="question-text">${question.question}</div>
+    <div class="area-banner">
+      <div>
+        <span class="topic-label">Área actual</span>
+        <h2>${group.area}</h2>
+        <p>Responde todas las preguntas de esta área en una sola pantalla.</p>
       </div>
-      <div class="answers-panel" id="answersPanel"></div>
+      <strong id="areaAnsweredCounter">0 de ${group.questions.length} respondidas</strong>
+    </div>
+    <div class="area-question-list">
+      ${group.questions.map((question, index) => renderQuestionCard(question, index)).join('')}
     </div>
   `;
 
-  const answersPanel = document.getElementById('answersPanel');
-  Object.entries(question.options).forEach(([key, text]) => {
-    const label = document.createElement('label');
-    label.className = 'option';
-    label.innerHTML = `<input type="radio" name="option" value="${key}"> <strong>${key})</strong> ${text}`;
-    answersPanel.appendChild(label);
+  container.querySelectorAll('input[type="radio"]').forEach(input => {
+    input.addEventListener('change', updateAreaButtonState);
   });
 
-  const nextButton = document.getElementById('nextButton');
-  nextButton.textContent = isLastQuestion ? 'Finalizar simulacro' : 'Siguiente';
-  nextButton.classList.add('hidden');
+  updateAreaButtonState();
+}
 
-  container.querySelectorAll('input[name="option"]').forEach(radio => {
-    radio.addEventListener('change', () => nextButton.classList.remove('hidden'));
+function saveCurrentAreaAnswers() {
+  const group = areaGroups[currentAreaIndex];
+  const unanswered = [];
+  const areaAnswers = [];
+
+  group.questions.forEach(question => {
+    const selected = document.querySelector(`input[name="q-${question.id}"]:checked`);
+    if (!selected) {
+      unanswered.push(question.id);
+      return;
+    }
+    areaAnswers.push({
+      question,
+      selected: selected.value,
+      correct: selected.value === question.correct_answer
+    });
   });
 
-  if (nextQuestion && (nextQuestion.area !== question.area || nextQuestion.topic !== question.topic)) {
-    const notice = document.createElement('div');
-    notice.className = 'next-topic-notice';
-    notice.textContent = `Después de esta pregunta inicia: ${nextQuestion.area} · ${nextQuestion.topic}`;
-    container.appendChild(notice);
+  if (unanswered.length > 0) {
+    alert(`Te faltan ${unanswered.length} pregunta(s) de esta área.`);
+    return false;
   }
+
+  answers.push(...areaAnswers);
+  return true;
 }
 
 function nextQuestion() {
-  const selected = document.querySelector('input[name="option"]:checked');
-  if (!selected) return;
+  const saved = saveCurrentAreaAnswers();
+  if (!saved) return;
 
-  const question = examQuestions[currentIndex];
-  answers.push({
-    question,
-    selected: selected.value,
-    correct: selected.value === question.correct_answer
-  });
-
-  currentIndex++;
-  if (currentIndex >= examQuestions.length) {
+  currentAreaIndex++;
+  if (currentAreaIndex >= areaGroups.length) {
     finishExam();
   } else {
-    showQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    showCurrentArea();
   }
 }
 
 function finishExam() {
   clearInterval(timerInterval);
 
-  while (answers.length < examQuestions.length) {
-    const question = examQuestions[answers.length];
-    answers.push({ question, selected: null, correct: false });
-  }
+  const answeredIds = new Set(answers.map(answer => answer.question.id));
+  examQuestions.forEach(question => {
+    if (!answeredIds.has(question.id)) {
+      answers.push({ question, selected: null, correct: false });
+    }
+  });
 
   const correctCount = answers.filter(answer => answer.correct).length;
   const percentage = Math.round((correctCount / examQuestions.length) * 100);
@@ -195,6 +251,8 @@ function finishExam() {
     `;
     review.appendChild(item);
   });
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -211,5 +269,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.getElementById('restartButton').addEventListener('click', () => {
     document.getElementById('results').classList.add('hidden');
     document.getElementById('intro').classList.remove('hidden');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
