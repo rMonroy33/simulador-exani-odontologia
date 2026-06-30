@@ -14,12 +14,19 @@ const AREA_ORDER = [
   'Redacción indirecta'
 ];
 
-async function loadQuestions() {
-  const response = await fetch('data/questions.json');
+async function fetchQuestionFile(path, required = true) {
+  const response = await fetch(path);
   if (!response.ok) {
-    throw new Error('No se pudo cargar data/questions.json');
+    if (required) throw new Error(`No se pudo cargar ${path}`);
+    return [];
   }
-  questions = await response.json();
+  return response.json();
+}
+
+async function loadQuestions() {
+  const baseQuestions = await fetchQuestionFile('data/questions.json', true);
+  const extraQuestions = await fetchQuestionFile('data/questions_extra.json', false);
+  questions = [...baseQuestions, ...extraQuestions];
 }
 
 function getAreaIndex(area) {
